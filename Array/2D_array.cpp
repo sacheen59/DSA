@@ -19,7 +19,7 @@ int main(){
     // method 3 => using double pointer
 
     int **C;
-    C = new int[3];
+    C = new int*[3];
     C[0] = new int[4]{1,2,3,4};
     C[1] = new int[4]{5,6,7,8};
     C[2] = new int[4]{9,10,11,12};
