@@ -17,9 +17,12 @@ void Display(struct Array arr){
 }
 
 // function to add or append the value inside array
-void Append(struct Array &arr,int x){
-    arr.A[arr.length] = x;
-    arr.length++;
+void Append(struct Array *arr,int x){
+    if(arr->length < arr->size){
+        arr->A[arr->length] = x;
+        arr->length++;
+    }
+    
 }
 
 int main(){
@@ -45,7 +48,7 @@ int main(){
     int x;
     cout<<"Enter your value to insert: ";
     cin>>x;
-    Append(arr,x);
+    Append(&arr,x);
     
     cout<<"Array after inserting"<<endl;
     Display(arr);
