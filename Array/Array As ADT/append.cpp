@@ -9,7 +9,7 @@ struct Array{
 };
 
 //function to display an array
-void Display(struct Array &arr){
+void Display(struct Array arr){
     int i;
     for(i = 0; i< arr.length; i++){
         cout<<arr.A[i]<<endl;
@@ -17,7 +17,7 @@ void Display(struct Array &arr){
 }
 
 // function to add or append the value inside array
-void Append(struct Array arr,int x){
+void Append(struct Array &arr,int x){
     arr.A[arr.length] = x;
     arr.length++;
 }
