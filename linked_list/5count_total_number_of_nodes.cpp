@@ -35,6 +35,15 @@ int count_total_node(struct Node *p){
     return count;
 }
 
+// count total number of nodes using recursion
+int Rcount_total_nodes(struct Node *p){
+    if(p == NULL){
+        return 0;
+    }else{
+        return Rcount_total_nodes(p->next) + 1;
+    }
+}
+
 int main(){
     int A[] = {1,2,3,4,5};
     // creating a linked list
