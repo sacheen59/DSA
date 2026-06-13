@@ -32,15 +32,27 @@ int sumOfData(struct Node *p){
     return sum;
 }
 
+int RSumOfData(struct Node *p){
+    int sum = 0;
+    if(p == NULL){
+        return 0;
+    }
+    else{
+        return RSumOfData(p->next) + p->data;
+    }
+    return sum;
+}
+
 
 int main(){
-    int A[] = {10,20,3,5, 30};
+    int A[] = {10,20,3,5, 40};
     // creating the Node
     create(A, 5);
     // sum of all data in node
     int total = sumOfData(first);
     cout<<"The sum of all data is: "<<total<<endl;
+
+    // sum of all data in linked list using recursion
+    int Rtotal = RSumOfData(first);
+    cout<<"The sum of all node using recursion is: "<<Rtotal<<endl;
 }
-
-
-
